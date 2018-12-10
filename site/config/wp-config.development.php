@@ -16,7 +16,7 @@
 define('DB_HOST', 'localhost');
 
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress-starter');
+define('DB_NAME', 'alqatami');
 
 /** MySQL database username */
 define('DB_USER', 'root');

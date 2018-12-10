@@ -34,7 +34,7 @@ $env = [
         'ssl'    => false,
     ],
     'development' => [
-        'domain' => ['wordpress.starter', 'localhost'],
+        'domain' => ['alqatami.local', 'localhost'],
         'path'   => '',
         'ssl'    => false,
     ],
