@@ -1,0 +1,41 @@
+{
+    "name": "vico/wordpress-starter",
+    "authors": [
+        {
+            "name": "vico",
+            "email": "laplace.victor@gmail.com"
+        }
+    ],
+    "type"        : "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "https://wpackagist.org"
+        }
+    ],
+    "config"      : {
+        "vendor-dir": "site/app/vendor"
+    },
+    "require": {
+        "johnpbloch/wordpress": ">=4.9",
+        "timber/timber": "^1.8",
+        "yoast/wordpress-seo": "^9.2",
+        "roots/soil": "^3.7",
+        "wpackagist-plugin/akismet": "^4.1",
+        "wpackagist-plugin/wp-migrate-db": "^1.0",
+        "wpackagist-plugin/advanced-custom-fields": "^5.7",
+        "wpackagist-plugin/better-wp-security": "^7.2",
+        "wpackagist-plugin/multisite-clone-duplicator": "^1.5",
+        "wpackagist-plugin/query-monitor": "^3.1",
+        "wpackagist-plugin/wordpress-importer": "^0.6.4",
+        "wpackagist-plugin/wp-super-cache": "^1.6",
+        "wpackagist-plugin/classic-editor": "^1.0"
+    },
+    "extra"       : {
+        "wordpress-install-dir": "site/wp",
+        "installer-paths": {
+            "site/app/plugins/{$name}/": ["type:wordpress-plugin"],
+            "site/app/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}
