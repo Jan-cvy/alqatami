@@ -1,20 +1,23 @@
 <?php
+
+namespace Alqatami\Theme\Single;
+
+/*
+|------------------------------------------------------------------
+| Single Controller
+|------------------------------------------------------------------
+|
+| Think about theme template files as some sort of controllers
+| from MVC design pattern. They should link application
+| logic with your theme view templates files.
+|
+*/
+
+use function Alqatami\Theme\App\template;
+
 /**
- * The Template for displaying all single posts
+ * Renders single post.
  *
- * Methods for TimberHelper can be found in the /lib sub-directory
- *
- * @package  WordPress
- * @subpackage  Timber
- * @since    Timber 0.1
+ * @see resources/templates/single.tpl.php
  */
-
-$context = Timber::get_context();
-$post = Timber::query_post();
-$context['post'] = $post;
-
-if ( post_password_required( $post->ID ) ) {
-	Timber::render( 'single-password.twig', $context );
-} else {
-	Timber::render( array( 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig' ), $context );
-}
+template('single');

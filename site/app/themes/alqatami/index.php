@@ -1,23 +1,37 @@
 <?php
-/**
- * The main template file
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists
- *
- * Methods for TimberHelper can be found in the /lib sub-directory
- *
- * @package  WordPress
- * @subpackage  Timber
- * @since   Timber 0.1
- */
 
-$context = Timber::get_context();
-$context['posts'] = new Timber\PostQuery();
-$context['foo'] = 'bar';
-$templates = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'front-page.twig', 'home.twig' );
+namespace Alqatami\Theme\Index;
+
+/*
+|------------------------------------------------------------------
+| Index Controller
+|------------------------------------------------------------------
+|
+| Think about theme template files as some sort of controllers
+| from MVC design pattern. They should link application
+| logic with your theme view templates files.
+|
+*/
+
+use function Alqatami\Theme\App\template;
+
+/**
+ * Renders index page header.
+ *
+ * @see resources/templates/index.tpl.php
+ */
+function render_header()
+{
+    template('partials/header', [
+        'title' => __('Tonik — WordPress Starter Theme'),
+        'lead' => __('Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development. Take a look at what is waiting for you.'),
+    ]);
 }
-Timber::render( $templates, $context );
+add_action('theme/index/header', 'Alqatami\Theme\Index\render_header');
+
+/**
+ * Renders index page.
+ *
+ * @see resources/templates/index.tpl.php
+ */
+template('index');

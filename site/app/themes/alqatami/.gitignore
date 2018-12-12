@@ -1,2 +1,12 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+node_modules
+npm-debug.log
 vendor
-wp-content
+
+.DS_Store
+Thumbs.db
+
+public
+
+.env

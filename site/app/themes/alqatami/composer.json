@@ -1,29 +1,14 @@
 {
-  "name": "upstatement/timber-starter-theme",
-  "description": "Starter theme to build a Timber theme",
-  "type":"wordpress-theme",
-  "minimum-stability" : "stable",
-  "authors": [
-      {
-          "name": "jarednova",
-          "email": "jared@upstatement.com"
-      }
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
-  "extra": {
-  	"installer-paths": {
-      "../../plugins/{$name}/": [
-        "wpackagist-plugin/*",
-        "type:wordpress-plugin"
-      ]
-  	}
-	},
+  "name": "tonik/theme",
+  "description": "Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.",
+  "keywords": ["tonik", "theme", "gin", "wordpress", "wordpress-starter-theme", "wordpress-theme"],
+  "license": "MIT",
+  "type": "wordpress-theme",
   "require": {
-	  "wpackagist-plugin/timber-library": "1.*"
+    "php": ">=7.0",
+    "tonik/gin": "^3.0.0"
+  },
+  "require-dev": {
+    "tonik/cli": "^3.0.0"
   }
 }

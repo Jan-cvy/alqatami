@@ -1,35 +1,48 @@
+# Tonik — WordPress Starter Theme
 
-# The Timber Starter Theme
+> The `develop` branch tracks starter development and it's not a stable code. If you want a stable version, use the [`master`](//github.com/tonik/theme/tree/master) branch or one of the latest [releases](//github.com/tonik/theme/releases).
 
-The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!
+[![Build Status](https://travis-ci.org/tonik/theme.svg?branch=master)](https://travis-ci.org/tonik/theme) [![Packagist](https://img.shields.io/packagist/dt/tonik/theme.svg)](https://github.com/tonik/theme) [![license](https://img.shields.io/github/license/tonik/theme.svg)](https://github.com/tonik/theme)
 
-[![Build Status](https://travis-ci.org/timber/starter-theme.svg)](https://travis-ci.org/timber/starter-theme)
+### Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.
 
-## Installing the Theme
+Take a look at what is waiting for you:
 
-Install this theme as you would any other, and be sure the Timber plugin is activated. But hey, let's break it down into some bullets:
+- [ES6](https://babeljs.io/learn-es2015/) for JavaScript
+- [SASS](http://sass-lang.com/) preprocessor for CSS
+- [Webpack](https://webpack.js.org/) for managing, compiling and optimizing theme's asset files
+- Simple [CLI](https://github.com/tonik/cli) for quickly initializing a new project
+- Ready to use front-end boilerplates for [Foundation](//foundation.zurb.com/sites.html), [Bootstrap](//getbootstrap.com/docs/3.3/), [Bulma](//bulma.io/) and [Vue](//vuejs.org/)
+- Utilizes PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
+- Simple [Theme Service Container](http://symfony.com/doc/2.0/glossary.html#term-service-container)
+- Child Theme friendly [Autoloader](https://en.wikipedia.org/wiki/Autoload)
+- Readable and centralized Theme Configs
+- Oriented for building with [Actions](https://codex.wordpress.org/Glossary#Action) and [Filters](https://codex.wordpress.org/Glossary#Filter)
+- Enhanced [Templating](https://en.wikibooks.org/wiki/PHP_Programming/Why_Templating) with support for passing data
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](https://timber.github.io/docs/guides/acf-cookbook/#nav) together). 
-2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation. 
-3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
-4. Activate the theme in Appearance >  Themes.
-5. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+### Requirements
 
-## What's here?
+Tonik Starter Theme follows [WordPress recommended requirements](https://wordpress.org/about/requirements/). Make sure you have all these dependences installed before moving on:
 
-`static/` is where you can keep your static front-end scripts, styles, or images. In other words, your Sass files, JS files, fonts, and SVGs would live here.
+- WordPress >= 4.7
+- PHP >= 7.0
+- [Composer](https://getcomposer.org)
+- [Node.js](https://nodejs.org)
 
-`templates/` contains all of your Twig templates. These pretty much correspond 1 to 1 with the PHP files that respond to the WordPress template hierarchy. At the end of each PHP template, you'll notice a `Timber::render()` function whose first parameter is the Twig file where that data (or `$context`) will be used. Just an FYI.
+## Documentation
 
-`bin/` and `tests/` ... basically don't worry about (or remove) these unless you know what they are and want to.
+Comprehensive documentation of the starter is available at http://labs.tonik.pl/theme/
 
-## Other Resources
+## Contributing
 
-The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great, so reference those often. Also, check out these articles and projects for more info:
+Great that you are considering supporting the project. You have a lot of ways to help us grow. We appreciate all contributions, even the smallest.
 
-* [This branch](https://github.com/laras126/timber-starter-theme/tree/tackle-box) of the starter theme has some more example code with ACF and a slightly different set up.
-* [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
-* [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
-* [A real live Timber theme](https://github.com/laras126/yuling-theme).
-* [Timber Video Tutorials](http://timber.github.io/timber/#video-tutorials) and [an incomplete set of screencasts](https://www.youtube.com/playlist?list=PLuIlodXmVQ6pkqWyR6mtQ5gQZ6BrnuFx-) for building a Timber theme from scratch.
+- Report an issue
+- Propose a feature
+- Send a pull request
+- Star project on the [GitHub](https://github.com/tonik/tonik)
+- Tell about project around your community
 
+## License
+
+The Tonik Starter Theme is licensed under the [MIT license](http://opensource.org/licenses/MIT).
