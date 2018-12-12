@@ -1,0 +1,41 @@
+html{
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-size: 62.5%;
+  background-color: white;
+  @include SANSSERIF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+::selection {
+  background: #000000; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #000000; /* Gecko Browsers */
+}
+
+*{
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  // user-select :none !important;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  &:hover{
+    text-decoration: underline;
+  }
+}

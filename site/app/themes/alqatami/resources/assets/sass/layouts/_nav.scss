@@ -1,0 +1,81 @@
+.nav{
+  @include SERIF;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &__wrapper{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    .nav--opened &{
+      opacity: 1;
+    }
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  &__burger{
+    position: absolute;
+    top: 1.5rem;
+    left: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    div{
+      height: 2px;
+      width: 4.3rem;
+      margin: 1.2rem 0;
+      background: black;
+      border-radius: 2px;
+      transition: all .3s ease;
+    }
+
+    .nav--opened &{
+      div{
+        &:nth-child(1){
+          transform: translateY(1.4rem) rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: translateY(-1.4rem) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__logo{
+    width: 34.9rem;
+    height: 9rem;
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    z-index: 10;
+    transform: translateX(-50%);
+  }
+
+  &__menu{
+    text-transform: uppercase;
+    font-size: 4.6rem;
+    text-align: center;
+    line-height: 10rem;
+    margin-top: 15rem;
+
+    .sub-menu{
+      font-size: 2.5rem;
+      line-height: 6rem;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}

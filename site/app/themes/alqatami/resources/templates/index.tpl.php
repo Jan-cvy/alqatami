@@ -13,8 +13,6 @@
     <div class="wrapper">
         <div class="content">
             <?php if (have_posts()) : ?>
-                <h4>Posts</h4>
-
                 <div class="posts">
                     <?php while (have_posts()) : the_post() ?>
                         <?php
@@ -39,7 +37,7 @@
             <?php endif; ?>
         </div>
 
-        <?php if (apply_filters('theme/index/sidebar/visibility', true)) : ?>
+        <?php if (apply_filters('theme/index/sidebar/visibility', false)) : ?>
             <?php
                 /**
                  * Functions hooked into `theme/index/sidebar` action.

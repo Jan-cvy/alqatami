@@ -10,7 +10,9 @@
     "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
     "lint": "npm run lint:js && npm run lint:sass"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tiny-emitter": "^2.0.2"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",

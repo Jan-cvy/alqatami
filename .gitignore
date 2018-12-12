@@ -8,6 +8,8 @@ dist
 *.sublime-workspace
 *.map
 .DS_Store
+.env*
+!.env.example
 
 wp
 vendor

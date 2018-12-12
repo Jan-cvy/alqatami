@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/helveticaneue.woff2') format('woff2'),
+    url('../fonts/helveticaneue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ogg Roman';
+  src: url('../fonts/ogg-roman-webfont.woff2') format('woff2'),
+    url('../fonts/ogg-roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin SERIF{
+  font-family: 'Ogg Roman', serif;
+}
+@mixin SANSSERIF{
+  font-family: 'HelveticaNeue', serif;
+}
