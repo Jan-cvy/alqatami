@@ -85,3 +85,5 @@ function load_textdomain() {
     load_theme_textdomain(config('textdomain'), "{$paths['directory']}/{$directories['languages']}");
 }
 add_action('after_setup_theme', 'Alqatami\Theme\App\Setup\load_textdomain');
+
+add_filter('show_admin_bar', '__return_false');

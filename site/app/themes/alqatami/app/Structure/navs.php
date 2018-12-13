@@ -26,3 +26,16 @@ function register_navigation_areas()
     ]);
 }
 add_action('after_setup_theme', 'Alqatami\Theme\App\Structure\register_navigation_areas');
+
+
+class Sublevel_Walker extends \Walker_Nav_Menu
+{
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='sub-menu-wrap'><ul class='sub-menu'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div>\n";
+    }
+}

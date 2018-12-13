@@ -1,10 +1,3 @@
-    <?php
-//<header class="header">
-        /**
-         * Functions hooked into `theme/header/end` action.
-         *
-         * @hooked Alqatami\Theme\App\Structure\render_documentation_button - 10
-         */
-        // do_action('theme/header/end')
-//</header>
-    ?>
+<header class="header">
+  <a href="<?= get_home_url(); ?>"><img src="<?php echo asset_path('images/logo.png') ?>" class="nav__logo" /></a>
+</header>

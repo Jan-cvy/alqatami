@@ -25,11 +25,12 @@ function add_image_sizes()
   // add_image_size('image1024', 0, 1024, false); // full
   add_image_size('image768', 0, 768, false);
   add_image_size('image512', 0, 512, false);
+  add_image_size('image384', 0, 384, false);
 
-  add_image_size('image-crop-1024', 1024, 512, true);
-  add_image_size('image-crop-768', 768, 384, true);
-  add_image_size('image-crop-512', 512, 256, true);
-  add_image_size('image-crop-384', 384, 192, true);
+  add_image_size('image-crop-768', 1152, 768, true);
+  add_image_size('image-crop-512', 768, 512, true);
+  add_image_size('image-crop-384', 576, 384, true);
+  add_image_size('image-crop-256', 384, 256, true);
 
 }
 add_action('after_setup_theme', 'Alqatami\Theme\App\Structure\add_image_sizes');

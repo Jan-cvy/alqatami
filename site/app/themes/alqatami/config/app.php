@@ -78,6 +78,8 @@ return [
         'Setup/filters.php',
         'Setup/supports.php',
         'Setup/services.php',
+        'Setup/debug.php',
+        'Structure/image.php',
         'Structure/navs.php',
         'Structure/widgets.php',
         'Structure/sidebars.php',

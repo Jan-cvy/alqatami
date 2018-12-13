@@ -1,0 +1,22 @@
+.page{
+  &__content{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding-bottom: 8rem;
+
+    p, ul{
+      margin-bottom: 4rem;
+    }
+
+    ul{
+      li{
+        padding-left: 16rem;
+      }
+      span{
+        display: inline-block;
+        width: 16rem;
+        margin-left: -16rem;
+      }
+    }
+  }
+}

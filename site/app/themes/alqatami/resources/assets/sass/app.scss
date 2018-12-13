@@ -4,5 +4,10 @@
 @import './common/fonts';
 @import './common/variables';
 @import './common/base';
+@import './common/grid';
 
 @import './layouts/nav';
+@import './layouts/single';
+@import './layouts/page';
+
+@import './components/image';

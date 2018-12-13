@@ -4,6 +4,11 @@
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 4.6rem;
+  text-align: center;
+  line-height: 10rem;
 
   &__wrapper{
     position: fixed;
@@ -27,6 +32,7 @@
 
   ul{
     list-style: none;
+
   }
 
   &__burger{
@@ -37,8 +43,8 @@
     z-index: 10;
     div{
       height: 2px;
-      width: 4.3rem;
-      margin: 1.2rem 0;
+      width: 43px;
+      margin: 12px 0;
       background: black;
       border-radius: 2px;
       transition: all .3s ease;
@@ -47,13 +53,13 @@
     .nav--opened &{
       div{
         &:nth-child(1){
-          transform: translateY(1.4rem) rotate(45deg);
+          transform: translateY(14px) rotate(45deg);
         }
         &:nth-child(2){
           opacity: 0;
         }
         &:nth-child(3){
-          transform: translateY(-1.4rem) rotate(-45deg);
+          transform: translateY(-14px) rotate(-45deg);
         }
       }
     }
@@ -70,17 +76,26 @@
   }
 
   &__menu{
-    text-transform: uppercase;
-    font-size: 4.6rem;
-    text-align: center;
-    line-height: 10rem;
-    margin-top: 15rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
 
     .sub-menu{
       font-size: 2.5rem;
       line-height: 6rem;
-      height: 0;
-      overflow: hidden;
+      padding: 1rem 0;
+      &-wrap{
+        height: 0;
+        overflow: hidden;
+        transition: height .5s ease;
+      }
     }
+  }
+
+  &__gcc{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }

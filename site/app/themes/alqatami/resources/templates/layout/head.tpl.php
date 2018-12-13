@@ -1,5 +1,6 @@
 <?php
 use function Alqatami\Theme\App\asset_path;
+use Alqatami\Theme\App\Structure;
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -17,13 +18,20 @@ use function Alqatami\Theme\App\asset_path;
                     <div></div>
                     <div></div>
                 </div>
-                <a href="<?= get_home_url(); ?>"><img src="<?php echo asset_path('images/logo.png') ?>" class="nav__logo" /></a>
                 <div class="nav__wrapper">
                     <?php
                     wp_nav_menu([
                       'theme_location' => 'primary',
-                      'menu_class' => 'nav__menu'
+                      'menu_class' => 'nav__menu',
+                      'walker' => new Structure\Sublevel_Walker
                     ]);
                     ?>
+                    <div class="nav__gcc">
+                        <a href="http://www.gccdomain.com/" target="_blank">GCC</a>
+                    </div>
                 </div>
             </nav>
+            <header class="header">
+              <a href="<?= get_home_url(); ?>"><img src="<?php echo asset_path('images/logo.png') ?>" class="nav__logo" /></a>
+            </header>
+

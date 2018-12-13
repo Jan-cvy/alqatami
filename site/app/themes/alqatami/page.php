@@ -20,4 +20,4 @@ use function Alqatami\Theme\App\template;
  *
  * @see resources/templates/single.tpl.php
  */
-template('single');
+template('page');

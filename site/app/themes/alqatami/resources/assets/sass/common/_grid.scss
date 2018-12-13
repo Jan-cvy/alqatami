@@ -1,0 +1,33 @@
+.row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &-4{
+    .col{
+      width: 24%;
+    }
+  }
+  &-3{
+    .col{
+      width: 32.333%;
+    }
+  }
+  &-2{
+    .col{
+      width: 49%;
+    }
+  }
+
+  article{
+    margin-bottom: 2%;
+  }
+}
+
+.thumbnail{
+  &__title{
+    font-size: 2.2rem;
+    font-weight: normal;  
+  }
+}

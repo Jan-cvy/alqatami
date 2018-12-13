@@ -1,3 +1,5 @@
+import css from 'dom-css'
+
 export default class Nav{
   constructor( el ){
     this.el = el
@@ -6,7 +8,24 @@ export default class Nav{
 
     this.burger = this.el.querySelector('.nav__burger')
     this.burger.addEventListener('click', ()=>this.toggle())
-    console.log(this.burger)
+    
+    this.subMenus = this.el.querySelectorAll('.menu-item-has-children > a')
+    
+    for( let i = 0, lg = this.subMenus.length; i<lg; i++ ){
+      this.subMenus[i].addEventListener('click', (e)=>{
+        e.preventDefault()
+        const submenu = this.subMenus[i].parentNode
+        if( submenu.classList.contains('nav__sub--opened') ){
+          submenu.classList.remove('nav__sub--opened')
+          css( submenu.querySelector('.sub-menu-wrap'), 'height', 0 )
+        }else{
+          submenu.classList.add('nav__sub--opened')
+          const submenuBox = submenu.querySelector('.sub-menu').getBoundingClientRect()
+          css( submenu.querySelector('.sub-menu-wrap'), 'height', submenuBox.height )
+        }
+      })
+    }
+
   }
 
   toggle(){

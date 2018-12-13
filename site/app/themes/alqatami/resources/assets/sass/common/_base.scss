@@ -2,9 +2,29 @@ html{
   width: 100%;
   min-height: 100%;
   margin: 0;
-  font-size: 62.5%;
+  font-size: 40%;
   background-color: white;
   @include SANSSERIF;
+  text-size-adjust: 100%;
+  letter-spacing: -0.2;
+}
+
+@media screen and (min-width: 64em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (min-width: 82em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 body {
@@ -35,7 +55,24 @@ body {
 a{
   text-decoration: none;
   color: black;
-  &:hover{
-    text-decoration: underline;
-  }
+  outline: none !important;
+}
+
+main{
+  padding-top: 15.5rem;
+}
+
+img{
+  display: block;
+}
+
+.wrapper{
+  width: calc( 100% - 44px );
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.rs{
+  width: 100%;
+  height: auto;
 }

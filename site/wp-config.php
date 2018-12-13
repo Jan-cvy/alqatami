@@ -2,7 +2,7 @@
 
 require __DIR__ . '/app/vendor/autoload.php';
 
-define('WP_CACHE', true);
+define('WP_CACHE', false);
 define( 'WPCACHEHOME', '/Users/vico/GIT/algatami/site/app/plugins/wp-super-cache/' );
 $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/site/';

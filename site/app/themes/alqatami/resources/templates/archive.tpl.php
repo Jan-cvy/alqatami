@@ -3,17 +3,49 @@
 <section class="section">
     <div class="wrapper">
         <div class="content">
-            <?php if (have_posts()) : ?>
+            <?php 
+            $num = 0;
+            $line = 0;
+            $opened = false;
+            $max = 4;
+            if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post() ?>
                     <?php
+                        if( $num == 0 ){
+                            echo '<div class="row row-'.$max.'">';
+                            $opened = true;
+                        }
+
                         /**
-                         * Functions hooked into `theme/single/content` action.
+                         * Functions hooked into `theme/index/post/thumbnail` action.
                          *
-                         * @hooked Alqatami\Theme\App\Structure\render_post_content - 10
+                         * @hooked Alqatami\Theme\App\Structure\render_post_thumbnail - 10
                          */
-                        do_action('theme/single/content');
+                        do_action('theme/index/post/thumbnail');
+
+                        $num++;
+                        if( 
+                            ( $line % 2 == 0 && $num == 4 )
+                            || ( $line % 2 == 1 && $num == 3 )
+                             ){
+                            echo '</div>';
+                            $line++;
+                            $num = 0;
+                            $opened = false;
+                            if( $line % 2 == 0 ){
+                                $max = 4;
+                            }else{
+                                $max = 3;
+                            }
+                        }
                     ?>
                 <?php endwhile; ?>
+
+                <?php 
+                if( $opened ) {
+                    echo '</div>';
+                }
+                ?>
             <?php endif; ?>
         </div>
     </div>
