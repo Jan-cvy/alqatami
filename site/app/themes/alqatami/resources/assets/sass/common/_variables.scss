@@ -2,3 +2,22 @@
 // =================================================
 $white: #fff;
 $primary: #153FA6;
+
+
+
+/** xs > 576 > sm > 768 > md > 999 > lg */
+$bp-xxs: "only screen and (max-width: 360px)";
+$bp-xs: "only screen and (max-width: 768px)";
+$bp-sm: "only screen and (max-width: 992px)";
+$bp-md: "only screen and (max-width: 1200px)";
+$bp-lg: "only screen and (min-width: 1201px)";
+
+$bp-xs-up: "only screen and (min-width: 769px)";
+$bp-sm-up: "only screen and (min-width: 993px)";
+$bp-md-up: "only screen and (min-width: 1201px)";
+$bp-lg-up: "only screen and (min-width: 1201px)";
+
+$bp-xs-only: "only screen and (max-width: 768px)";
+$bp-sm-only: "only screen and (min-width: 769px) and (max-width: 992px)";
+$bp-md-only: "only screen and (min-width: 1201px) and (max-width: 1200px)";
+$bp-lg-only: "only screen and (min-width: 1201px)";

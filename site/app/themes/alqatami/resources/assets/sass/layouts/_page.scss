@@ -3,20 +3,41 @@
     font-size: 2.5rem;
     line-height: 3rem;
     padding-bottom: 8rem;
+    @media #{$bp-xs}{
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
 
     p, ul{
       margin-bottom: 4rem;
+      @media #{$bp-xs}{
+        margin-bottom: 2rem;
+      }
     }
 
     ul{
       li{
-        padding-left: 16rem;
+        padding-left: 14rem;
       }
       span{
         display: inline-block;
-        width: 16rem;
-        margin-left: -16rem;
+        width: 14rem;
+        margin-left: -14rem;
+      }
+      @media #{$bp-xs}{
+        li{
+          padding-left: 8rem;
+        }
+        span{
+          display: inline-block;
+          width: 8rem;
+          margin-left: -8rem;
+        }
       }
     }
+  }
+
+  &__image{
+    margin-bottom: 1rem;
   }
 }

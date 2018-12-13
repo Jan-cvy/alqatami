@@ -11,6 +11,8 @@ export default class Nav{
     
     this.subMenus = this.el.querySelectorAll('.menu-item-has-children > a')
     
+    console.log(this.burger)
+
     for( let i = 0, lg = this.subMenus.length; i<lg; i++ ){
       this.subMenus[i].addEventListener('click', (e)=>{
         e.preventDefault()
@@ -29,6 +31,7 @@ export default class Nav{
   }
 
   toggle(){
+    console.log('toggle')
     if( this.isOpened ){
       this.close()
     }else{

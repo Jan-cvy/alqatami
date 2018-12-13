@@ -44,7 +44,7 @@ use Alqatami\Theme\App\Image;
 
                       <a href="">Contact me</a>
                     </div>
-                    <div class="col">
+                    <div class="col col-first page__image">
                       <?php 
                       Image\get_responsive_featured_image( array( 
                         'ID' => get_the_ID(),

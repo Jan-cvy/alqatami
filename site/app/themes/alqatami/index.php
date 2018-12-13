@@ -22,10 +22,7 @@ use function Alqatami\Theme\App\template;
  */
 function render_header()
 {
-    template('partials/header', [
-        'title' => __('Tonik — WordPress Starter Theme'),
-        'lead' => __('Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development. Take a look at what is waiting for you.'),
-    ]);
+    template('partials/header');
 }
 add_action('theme/index/header', 'Alqatami\Theme\Index\render_header');
 

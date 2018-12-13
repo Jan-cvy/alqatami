@@ -9,6 +9,12 @@ html{
   letter-spacing: -0.2;
 }
 
+@media screen and (max-width: 48em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
 @media screen and (min-width: 64em) {
   html {
     font-size: 40%;
@@ -33,6 +39,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -60,6 +68,9 @@ a{
 
 main{
   padding-top: 15.5rem;
+  @media #{$bp-xs}{
+    padding-top: 10rem;
+  }
 }
 
 img{
@@ -70,6 +81,9 @@ img{
   width: calc( 100% - 44px );
   max-width: 1600px;
   margin: 0 auto;
+  @media #{$bp-xs}{
+    width: 94%;
+  }
 }
 
 .rs{

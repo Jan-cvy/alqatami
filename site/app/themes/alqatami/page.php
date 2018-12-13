@@ -16,6 +16,17 @@ namespace Alqatami\Theme\Page;
 use function Alqatami\Theme\App\template;
 
 /**
+ * Renders index page header.
+ *
+ * @see resources/templates/index.tpl.php
+ */
+function render_header()
+{
+    template('partials/header');
+}
+add_action('theme/index/header', 'Alqatami\Theme\Index\render_header');
+
+/**
  * Renders single page.
  *
  * @see resources/templates/single.tpl.php

@@ -10,6 +10,11 @@
   text-align: center;
   line-height: 10rem;
 
+  @media #{$bp-xs}{
+    font-size: 2.8rem;
+    line-height: 5rem;
+  }
+
   &__wrapper{
     position: fixed;
     left: 0;
@@ -41,6 +46,12 @@
     left: 2.5rem;
     cursor: pointer;
     z-index: 10;
+    @media #{$bp-xs}{
+      left: 1rem;
+      top: .5rem;
+      transform: scale(0.6);
+    }
+
     div{
       height: 2px;
       width: 43px;
@@ -48,6 +59,7 @@
       background: black;
       border-radius: 2px;
       transition: all .3s ease;
+
     }
 
     .nav--opened &{
@@ -66,13 +78,15 @@
   }
 
   &__logo{
-    width: 34.9rem;
-    height: 9rem;
+    width: 50%;
+    max-width: 34.9rem;
+    height: auto;
     position: absolute;
     left: 50%;
     top: 2rem;
     z-index: 10;
-    transform: translateX(-50%);
+    transform: translate3d(-50%,0,0);
+
   }
 
   &__menu{
@@ -85,6 +99,12 @@
       font-size: 2.5rem;
       line-height: 6rem;
       padding: 1rem 0;
+
+      @media #{$bp-xs}{
+        font-size: 1.6rem;
+        line-height: 4rem;
+      }
+
       &-wrap{
         height: 0;
         overflow: hidden;
