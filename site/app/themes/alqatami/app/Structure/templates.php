@@ -33,7 +33,7 @@ add_action('theme/index/post/thumbnail', 'Alqatami\Theme\App\Structure\render_po
  */
 function render_empty_content()
 {
-    template(['partials/index/content', 'none']);
+    // template(['partials/index/content', 'none']);
 }
 add_action('theme/index/content/none', 'Alqatami\Theme\App\Structure\render_empty_content');
 

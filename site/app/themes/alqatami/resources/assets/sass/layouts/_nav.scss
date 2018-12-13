@@ -12,11 +12,16 @@
     right: 0;
     bottom: 0;
     background-color: white;
-    opacity: 0;
     transition: opacity .3s ease;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear .3s, opacity .3s ease;
 
     .nav--opened &{
       opacity: 1;
+      visibility: visible;
+      transition: visibility 0s linear 0s, opacity .3s ease;
     }
   }
 
