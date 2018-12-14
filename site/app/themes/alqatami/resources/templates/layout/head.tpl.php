@@ -10,7 +10,7 @@ use Alqatami\Theme\App\Structure;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?>>
+    <body <?php body_class('no-touch'); ?>>
         <main id="app" class="app">
             <nav class="nav">
                 <div class="nav__burger">
@@ -32,7 +32,7 @@ use Alqatami\Theme\App\Structure;
                 </div>
             </nav>
 
-            <header class="header">
+            <header class="header portrait">
               <a href="<?= get_home_url(); ?>"><img src="<?php echo asset_path('images/logo.png') ?>" class="nav__logo" /></a>
             </header>
 

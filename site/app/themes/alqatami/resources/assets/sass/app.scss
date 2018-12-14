@@ -6,8 +6,10 @@
 @import './common/base';
 @import './common/grid';
 
-@import './layouts/nav';
+@import './layouts/archive';
 @import './layouts/single';
 @import './layouts/page';
 
-@import './components/image';
+@import './components/nav';
+@import './components/carrousel';
+// @import './components/image';

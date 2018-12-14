@@ -44,4 +44,35 @@ function register_book_post_type()
         ],
     ]);
 }
-add_action('init', 'Alqatami\Theme\App\Structure\register_book_post_type');
+// add_action('init', 'Alqatami\Theme\App\Structure\register_book_post_type');
+
+
+
+function revcon_change_post_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Projects';
+    $submenu['edit.php'][5][0] = 'Projects';
+    $submenu['edit.php'][10][0] = 'Add Projects';
+    $submenu['edit.php'][16][0] = 'Projects Tags';
+}
+function revcon_change_post_object() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Projects';
+    $labels->singular_name = 'Projects';
+    $labels->add_new = 'Add Projects';
+    $labels->add_new_item = 'Add Projects';
+    $labels->edit_item = 'Edit Projects';
+    $labels->new_item = 'Projects';
+    $labels->view_item = 'View Projects';
+    $labels->search_items = 'Search Projects';
+    $labels->not_found = 'No Projects found';
+    $labels->not_found_in_trash = 'No Projects found in Trash';
+    $labels->all_items = 'All Projects';
+    $labels->menu_name = 'Projects';
+    $labels->name_admin_bar = 'Projects';
+}
+ 
+add_action( 'admin_menu', __NAMESPACE__ . '\\revcon_change_post_label' );
+add_action( 'init', __NAMESPACE__ . '\\revcon_change_post_object' );

@@ -1,0 +1,13 @@
+.thumbnail{
+  a{
+    text-decoration: none;
+  }
+  &__title{
+    font-size: 2.2rem;
+    font-weight: normal;  
+    margin-top: 0.5rem;
+    @media #{$bp-xs}{
+      font-size: 1.5rem;
+    }
+  }
+}

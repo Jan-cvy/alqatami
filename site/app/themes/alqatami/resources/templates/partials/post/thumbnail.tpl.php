@@ -11,7 +11,7 @@ use Alqatami\Theme\App\Image;
         'height' => 512,
         'class' => 'rs',
         // 'animation' => $animation,
-        'sizes' => '33vw'
+        'sizes' => '(min-width: 768px) 33vw, 94vw'
       ) );
       ?>
       <p class="thumbnail__title">

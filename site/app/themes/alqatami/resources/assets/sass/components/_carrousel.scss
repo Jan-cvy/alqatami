@@ -1,0 +1,150 @@
+.carrousel{
+  position: relative;
+
+  @media #{$bp-xs}{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    width: 94%;
+    transform: translateY(-50%);
+  }
+
+  &--single{
+    margin: 0 auto;
+
+    @media #{$bp-xs-up}{
+      max-width: calc( 200vh - 31rem - 24rem );
+    }
+  }
+
+  &--home{
+    li{
+      pointer-events: none; 
+    }
+  }
+
+  &__wrapper{
+    position: relative;
+  }
+
+  &__list{
+    position: relative;
+    width: 100%;
+    height: calc( 100vh - 15.5rem - 12rem );
+    @media #{$bp-xs}{
+      height: 64vw;
+      overflow: hidden;
+    }
+    @media #{$bp-xs-land}{
+      height: 100vh;
+    }
+   
+    li{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity .3s ease;
+      &.active{
+        opacity: 1;
+      }
+      img{
+        display: block;
+        width: auto;
+        height: calc( 100vh - 15.5rem - 12rem );
+        @media #{$bp-xs}{
+          height: 64vw;
+        }
+        @media #{$bp-xs-land}{
+          height: 100vh;
+        }
+      }
+    }
+  }
+
+  &__back{
+    position: absolute;
+    font-size: 2.5rem;
+    top: 0;
+    @media #{$bp-xs}{
+      font-size: 1.5rem;
+      top: -4rem;
+    }
+  }
+
+  &__arrow{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 50%;
+    cursor: pointer;
+    
+    .no-touch & {
+      opacity: 0;
+      transition: opacity .3s ease;
+  
+      .carrousel__arrow:hover{
+        opacity: 1;
+      }
+    }
+
+  
+    &:before{
+      position: absolute;
+      content: '';
+      background-image: url(../images/arrow.png);
+      width: 26px;
+      height: 13px;
+      margin-top: -6px;
+      background-size: 100%;
+      top: 50%;
+    }
+
+    &--left{
+      left: 0;
+    }
+
+    &--right{
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__description{
+    position: relative;
+    // height: 12rem;
+    margin-top: 3.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    @media #{$bp-xs}{
+      font-size: 1.5rem;
+      position: absolute;
+      width: 100%;
+    }
+
+    li{
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity .3s ease;
+      &.active{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__counter{
+    position: absolute;
+
+    &--desktop{
+      top: 0;
+      right: 0;
+    }
+    &--mobile{
+      top: -4rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

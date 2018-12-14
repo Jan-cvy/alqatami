@@ -10,8 +10,6 @@ export default class Nav{
     this.burger.addEventListener('click', ()=>this.toggle())
     
     this.subMenus = this.el.querySelectorAll('.menu-item-has-children > a')
-    
-    console.log(this.burger)
 
     for( let i = 0, lg = this.subMenus.length; i<lg; i++ ){
       this.subMenus[i].addEventListener('click', (e)=>{

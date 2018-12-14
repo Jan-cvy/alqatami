@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: About
+*/
 
 namespace Alqatami\Theme\Page;
 
@@ -20,4 +23,4 @@ use function Alqatami\Theme\App\template;
  *
  * @see resources/templates/single.tpl.php
  */
-template('page');
+template('page-about');
