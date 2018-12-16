@@ -1,4 +1,5 @@
 import AbstractCarrousel from './AbstractCarrousel'
+import Hammer from 'hammerjs'
 
 export default class Carrousel extends AbstractCarrousel {
   constructor( el ){
@@ -65,17 +66,29 @@ export default class Carrousel extends AbstractCarrousel {
       })
     }
     
+    var hammer = new Hammer(this.el);
+    hammer.on('swipe', (e)=>{
+      if( Math.abs(e.deltaX) > 30 ){
+        if( e.deltaX > 0 ){
+          this.previous()
+        }else{
+          this.next()
+        }
+      }
+    })
+
 
   }
 
   _update(){
     this.current.classList.remove('active')
-    if( this.type == 'home' ) this.currentTitle.classList.remove('active')
+    if( this.currentTitle ) this.currentTitle.classList.remove('active')
     
     this.current = this.items[ this.position ]
+    if( this.currentTitle ) this.currentTitle = this.itemsTitle[ this.position ]
     
     this.current.classList.add('active')
-    if( this.type == 'home' ) this.currentTitle.classList.add('active')
+    if( this.currentTitle ) this.currentTitle.classList.add('active')
 
     if( this.counter ){
       for( let i = 0, lg = this.counter.length; i<lg; i++ ){

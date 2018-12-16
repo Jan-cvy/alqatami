@@ -41,6 +41,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
   width: 100%;
+  min-height: 100%;
+  
+  @media #{$bp-xs}{
+    min-height: calc( 100vh + 1px );
+  }
 }
 
 ::selection {
