@@ -28,3 +28,4 @@ site/app/upgrade
 
 site/app/plugins/*
 !site/app/plugins/advanced-custom-fields-pro
+!site/app/plugins/gravityforms
