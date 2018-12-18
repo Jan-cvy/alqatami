@@ -70,6 +70,9 @@
       font-size: 1.5rem;
       top: -4rem;
     }
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   &__arrow{
@@ -77,36 +80,30 @@
     height: 100%;
     top: 0;
     width: 50%;
-    cursor: pointer;
-    
-    .no-touch & {
-      opacity: 0;
-      transition: opacity .3s ease;
-  
-      .carrousel__arrow:hover{
-        opacity: 1;
-      }
-    }
-
-  
-    &:before{
-      position: absolute;
-      content: '';
-      background-image: url(../images/arrow.png);
-      width: 26px;
-      height: 13px;
-      margin-top: -6px;
-      background-size: 100%;
-      top: 50%;
-    }
 
     &--left{
       left: 0;
+      cursor: url(../images/arrow.png) 4 12, pointer;
     }
 
     &--right{
       right: 0;
+      cursor: url(../images/arrow-right.png) 4 12, pointer;
       transform: rotate(180deg);
+    }
+
+    @media #{$bp-xs}{
+      &:before{
+        position: absolute;
+        content: '';
+        background-image: url(../images/arrow.png);
+        width: 26px;
+        height: 13px;
+        margin-top: -6px;
+        background-size: 100%;
+        top: 50%;
+        left: 1rem;
+      } 
     }
   }
 
@@ -145,6 +142,16 @@
       top: -4rem;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+}
+
+.no-touch {
+  .carrousel__arrow{
+    opacity: 0;
+    transition: opacity .3s ease;
+    &:hover{
+      opacity: 1;
     }
   }
 }

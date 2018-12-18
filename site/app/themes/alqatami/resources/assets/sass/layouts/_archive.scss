@@ -1,4 +1,5 @@
 .thumbnail{
+  position: relative;
   a{
     text-decoration: none;
   }
@@ -9,5 +10,45 @@
     @media #{$bp-xs}{
       font-size: 1.5rem;
     }
+  }
+  div{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 66.66%;
+    img{
+      position: absolute;
+      transition: transform 1s ease-out;
+    }
+  }
+  &:hover{
+    img{
+      transform: scale(1.2);
+      transition: transform 5s ease-out;
+    }
+  }
+}
+
+.archive{
+  &__title{
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 4.6rem;
+    text-align: center;
+    line-height: 10rem;
+    text-transform: uppercase;
+    @include SERIF;
+    @media #{$bp-xs}{
+      font-size: 2.3rem;
+      line-height: 5rem;
+    }
+  }
+
+  .content{
+    padding-bottom: 10rem;
   }
 }

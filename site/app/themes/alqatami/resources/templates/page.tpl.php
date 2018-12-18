@@ -7,14 +7,7 @@ use Alqatami\Theme\App\Image;
 <section class="section">
     <div class="wrapper">
         <div class="content">
-            <div class="row row-2">
-              <div class="col page__content">
-                
-              </div>
-              <div class="col col-first page__image">
-                
-              </div>
-            </div>
+          <?php the_content(); ?>
         </div>
     </div>
 </section>

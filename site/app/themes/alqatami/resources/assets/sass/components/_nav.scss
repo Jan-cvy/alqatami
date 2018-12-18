@@ -4,14 +4,14 @@
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   text-transform: uppercase;
   font-size: 4.6rem;
   text-align: center;
   line-height: 10rem;
 
   @media #{$bp-xs}{
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     line-height: 5rem;
   }
 
@@ -90,7 +90,9 @@
     top: 2rem;
     z-index: 10;
     transform: translate3d(-50%,0,0);
-
+    @media #{$bp-xs}{
+      max-width: 25rem;
+    }
   }
 
   &__menu{
@@ -121,5 +123,17 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+  }
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  z-index: 10;
+  height: 13rem;
+  @media #{$bp-xs}{
+    height: 9rem;
   }
 }

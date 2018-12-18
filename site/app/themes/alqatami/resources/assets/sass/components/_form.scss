@@ -1,0 +1,90 @@
+input,
+textarea{
+  border: 0;
+  background-color: rgba(#D8D8D8,0.3);
+  appearance: none;
+  outline: 0;
+  border-radius: 0;
+  width: 100%;
+}
+
+input[type=submit]{
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+input[type=text],
+input[type=email],
+textarea{
+  &:focus{
+    &::placeholder{
+      opacity: 0;
+    }
+  }
+  &::placeholder{
+    color: black;
+  }
+}
+
+textarea{
+  height: 50rem;
+}
+
+.form{
+  &_mail{
+    width: 55%;
+    display: inline-block;
+    label{
+      display: inline-block;
+      width: 12rem;
+    }
+    .ginput_container{
+      display: inline-block;
+      width: calc( 100% - 12rem );
+      padding-right: 2rem;
+    }
+  }
+  &_name{
+    width: 45%;
+    display: inline-block;
+    label{
+      display: none;
+    }
+    .ginput_container{
+
+    }
+  }
+  &_message{
+    label{
+      display: none;
+    }
+  }
+}
+
+// label,
+// .ginput_container{
+//   display: inline-block;
+// }
+
+.gform_wrapper{
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  ul{
+    font-size: 0;
+    li{
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.gform_footer{
+  text-align: center;
+  font-size: 2.5rem;
+}

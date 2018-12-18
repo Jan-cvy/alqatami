@@ -29,8 +29,7 @@
         "wpackagist-plugin/wordpress-importer": "^0.6.4",
         "wpackagist-plugin/wp-super-cache": "^1.6",
         "wpackagist-plugin/classic-editor": "^1.0",
-        "wpackagist-plugin/regenerate-thumbnails": "^3.0",
-        "wpackagist-plugin/very-simple-contact-form": "^9.6"
+        "wpackagist-plugin/regenerate-thumbnails": "^3.0"
     },
     "extra"       : {
         "wordpress-install-dir": "site/wp",

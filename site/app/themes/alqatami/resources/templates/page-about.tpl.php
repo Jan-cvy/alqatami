@@ -15,7 +15,7 @@ use Alqatami\Theme\App\Image;
 
               <p>ABOUT AZIZ AL QATAMI<br>
               Named as one of 15 Young Arab Architects by Venice Biennale 2012 & L’institut du Monde Arabe. Guest critic of Columbia University (New York), Pratt Institute (New York), Kuwait University (Kuwait).<br>
-              Photographers : Nelson Garrido, Uwe Wruck</p>
+              Photographers : <a href="" class="italic" target="_blank">Nelson Garrido</a>, <a href="" target="_blank" class="italic">Uwe Wruck</a></p>
 
               <ul>
                 <li>
@@ -32,15 +32,15 @@ use Alqatami\Theme\App\Image;
 
               <p>
               CONTACT<br>
-              aziz@atelierazizalqatami.com<br>
-              Salmiya, Block 11<br>
+              <a href="/contact/">aziz@atelierazizalqatami.com</a><br>
+              <a href="https://www.google.fr/maps/place/Baghdad+St,+Salmiya,+Kowe%C3%AFt/@29.3369624,48.0466347,16z/data=!4m8!1m2!2m1!1sSalmiya+Baghdad+Street+Building+106,+floor+5+Postal+Code+20011,+Kuwait!3m4!1s0x3fcf9da46deae3cb:0x34de49f9e65ed4df!8m2!3d29.3367464!4d48.050825?hl=fr" target="_blank" class="italic">Salmiya, Block 11<br>
               Baghdad Street<br>
               Building 106, floor 5<br>
-              Postal Code 20011, Kuwait<br>
+              Postal Code 20011, Kuwait</a><br>
               T. 965 99655422
               </p>
 
-              <a href="">Contact me</a>
+              <p><a href="/contact/">Contact me</a></p>
             </div>
             <div class="col col-first page__image">
               <?php 

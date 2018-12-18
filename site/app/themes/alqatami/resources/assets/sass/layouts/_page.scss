@@ -13,6 +13,20 @@
       @media #{$bp-xs}{
         margin-bottom: 2rem;
       }
+    
+      a{
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+        &.italic{
+          font-style: italic;
+          text-decoration: none;
+          // &:hover{
+          //   text-decoration: under;
+          // } 
+        }
+      }
     }
 
     ul{

@@ -1,5 +1,7 @@
-import AbstractCarrousel from './AbstractCarrousel'
-import Hammer from 'hammerjs'
+import AbstractCarrousel    from './AbstractCarrousel'
+import Hammer               from 'hammerjs'
+import { throttle }         from 'throttle-debounce';
+import Alqatami             from '../Alqatami'
 
 export default class Carrousel extends AbstractCarrousel {
   constructor( el ){
@@ -13,6 +15,8 @@ export default class Carrousel extends AbstractCarrousel {
     }else if( this.el.classList.contains('carrousel--home') ){
       this.type = 'home'
       this.loop = true
+
+      this.donext = true
     }
 
     this.init()
@@ -57,17 +61,29 @@ export default class Carrousel extends AbstractCarrousel {
             x: e.pageX,
             y: e.pageY
           }
-          this.next()
+
+          if( this.donext ){
+            this.donext = false
+            this.next()
+
+            setTimeout( ()=>{
+              this.donext = true
+            }, 200 )
+          }
         }
       })
 
       container.addEventListener('click', (e)=>{
         window.location.href = this.current.querySelector('a').getAttribute('href')
       })
+
+      this.startAutoTimeout()
     }
     
     var hammer = new Hammer(this.el);
     hammer.on('swipe', (e)=>{
+      clearTimeout( this.autoTimeout )
+
       if( Math.abs(e.deltaX) > 30 ){
         if( e.deltaX > 0 ){
           this.previous()
@@ -75,9 +91,18 @@ export default class Carrousel extends AbstractCarrousel {
           this.next()
         }
       }
+
+      this.startAutoTimeout()
     })
+  }
 
-
+  startAutoTimeout(){
+    this.autoTimeout = setTimeout( ()=>{
+      if( Alqatami.isTouch || Alqatami.isiOS ){
+        this.next() 
+        this.startAutoTimeout()
+      }
+    }, 2000 )
   }
 
   _update(){

@@ -22,6 +22,8 @@ use function Alqatami\Theme\App\asset_path;
  */
 function register_stylesheets() {
     wp_enqueue_style('app', asset_path('css/app.css'));
+    wp_dequeue_style('sscf-style');
+    wp_dequeue_style('wp-block-library');
 }
 add_action('wp_enqueue_scripts', 'Alqatami\Theme\App\Http\register_stylesheets');
 
@@ -31,7 +33,8 @@ add_action('wp_enqueue_scripts', 'Alqatami\Theme\App\Http\register_stylesheets')
  * @return void
  */
 function register_scripts() {
-    wp_enqueue_script('app', asset_path('js/app.js'), ['jquery'], null, true);
+    // if ( !is_admin() ) wp_deregister_script('jquery');
+    wp_enqueue_script('app', asset_path('js/app.js'), null, null, true);
 }
 add_action('wp_enqueue_scripts', 'Alqatami\Theme\App\Http\register_scripts');
 

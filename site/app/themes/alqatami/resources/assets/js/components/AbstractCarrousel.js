@@ -6,6 +6,7 @@ export default class AbstractCarrousel {
   }
 
   next(){
+    console.log('AbstractCarrousel.next')
     let p = this.position + 1
 
     if( p >= this.total ){

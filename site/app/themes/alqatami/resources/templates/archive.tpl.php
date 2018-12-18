@@ -2,6 +2,9 @@
 
 <section class="section">
     <div class="wrapper">
+        <div class="archive__title">
+            <?php echo single_cat_title(); ?>
+        </div>
         <div class="content">
             <?php 
             $num = 0;
