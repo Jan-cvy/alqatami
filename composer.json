@@ -25,12 +25,12 @@
         "wpackagist-plugin/wp-migrate-db": "^1.0",
         "wpackagist-plugin/advanced-custom-fields": "^5.7",
         "wpackagist-plugin/better-wp-security": "^7.2",
-        "wpackagist-plugin/multisite-clone-duplicator": "^1.5",
         "wpackagist-plugin/query-monitor": "^3.1",
         "wpackagist-plugin/wordpress-importer": "^0.6.4",
         "wpackagist-plugin/wp-super-cache": "^1.6",
         "wpackagist-plugin/classic-editor": "^1.0",
-        "wpackagist-plugin/regenerate-thumbnails": "^3.0"
+        "wpackagist-plugin/regenerate-thumbnails": "^3.0",
+        "wpackagist-plugin/very-simple-contact-form": "^9.6"
     },
     "extra"       : {
         "wordpress-install-dir": "site/wp",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbba87149f8f68f08b158a4febecd29b",
+    "content-hash": "b301f471d5f26820903e25ac45d92bb5",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -975,7 +975,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.8.zip",
-                "reference": null,
+                "reference": "tags/5.7.8",
                 "shasum": null
             },
             "require": {
@@ -1035,7 +1035,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/classic-editor.1.3.zip",
-                "reference": null,
+                "reference": "tags/1.3",
                 "shasum": null
             },
             "require": {
@@ -1075,7 +1075,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/query-monitor.3.2.1.zip",
-                "reference": null,
+                "reference": "tags/3.2.1",
                 "shasum": null
             },
             "require": {
@@ -1095,7 +1095,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.3.0.2.zip",
-                "reference": null,
+                "reference": "tags/3.0.2",
                 "shasum": null
             },
             "require": {
@@ -1103,6 +1103,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/very-simple-contact-form",
+            "version": "9.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/very-simple-contact-form/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/very-simple-contact-form.zip?timestamp=1545055531",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/very-simple-contact-form/"
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
