@@ -32,25 +32,41 @@ textarea{
 
 textarea{
   height: 50rem;
+  @media #{$bp-xs}{
+    height: 40vh;
+  }
 }
 
 .form{
   &_mail{
     width: 55%;
     display: inline-block;
+    @media #{$bp-xs}{
+      width: 100%;
+    }
     label{
       display: inline-block;
+      text-transform: uppercase;
       width: 12rem;
+      @media #{$bp-xs}{
+        width: 7rem;
+      }
     }
     .ginput_container{
       display: inline-block;
-      width: calc( 100% - 12rem );
-      padding-right: 2rem;
+      width: calc( 100% - 7rem );
+      @media #{$bp-xs-up}{
+        width: calc( 100% - 12rem );
+        padding-right: 2rem;
+      }
     }
   }
   &_name{
     width: 45%;
     display: inline-block;
+    @media #{$bp-xs}{
+      width: 100%;
+    }
     label{
       display: none;
     }
@@ -75,11 +91,19 @@ textarea{
   max-width: 1000px;
   margin: 0 auto;
 
+  @media #{$bp-xs}{
+    width: 94%;
+  }
+
   ul{
     font-size: 0;
     li{
       font-size: 2.5rem;
       margin-bottom: 2rem;
+      @media #{$bp-xs}{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
@@ -87,4 +111,12 @@ textarea{
 .gform_footer{
   text-align: center;
   font-size: 2.5rem;
+
+  @media #{$bp-xs}{
+    font-size: 1.5rem;
+  }
+}
+
+.gfield_required{
+  display: none;
 }

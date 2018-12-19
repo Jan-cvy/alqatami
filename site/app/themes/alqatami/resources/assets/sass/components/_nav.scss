@@ -53,29 +53,28 @@
     @media #{$bp-xs}{
       left: 1rem;
       top: .5rem;
-      transform: scale(0.6);
+      transform: scale(0.7);
     }
 
     div{
       height: 2px;
-      width: 43px;
-      margin: 12px 0;
+      width: 33px;
+      margin: 9px 0;
       background: black;
       border-radius: 2px;
       transition: all .3s ease;
-
     }
 
     .nav--opened &{
       div{
         &:nth-child(1){
-          transform: translateY(14px) rotate(45deg);
+          transform: translateY(12px) rotate(45deg);
         }
         &:nth-child(2){
           opacity: 0;
         }
         &:nth-child(3){
-          transform: translateY(-14px) rotate(-45deg);
+          transform: translateY(-11px) rotate(-45deg);
         }
       }
     }
@@ -123,6 +122,10 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+    a{
+      display: block;
+      line-height: 7rem;
+    }
   }
 }
 
@@ -134,6 +137,6 @@
   z-index: 10;
   height: 13rem;
   @media #{$bp-xs}{
-    height: 9rem;
+    height: 8rem;
   }
 }

@@ -17,7 +17,17 @@ use Alqatami\Theme\App\Image;
         ?>
       </div>
       <p class="thumbnail__title">
-        <?php the_title(); ?> <time>[<?php the_field('date'); ?>]</time>
+        <?php 
+        $date = get_field("date");
+        if( $date ){
+          $dateTime = DateTime::createFromFormat("d/m/Y", $date);
+          $year = $dateTime->format('Y'); 
+        }
+        ?>
+        <?php the_title(); ?> 
+        <?php if( isset( $year ) ): ?>
+          <time>[<?php echo $year; ?>]</time> 
+        <?php endif; ?>
       </p>
     </a>
 </article>

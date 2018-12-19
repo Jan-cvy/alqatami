@@ -1,3 +1,18 @@
+@keyframes jello {
+  11.1% {
+    transform: skewX(1.5625deg) skewY(1.5625deg); 
+  }
+  33.3% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg); 
+  }
+  66.6% {
+    transform: skewX(0.390625deg) skewY(0.390625deg); 
+  }
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg); 
+  } 
+}
+
 .thumbnail{
   position: relative;
   a{
@@ -18,13 +33,16 @@
     padding-bottom: 66.66%;
     img{
       position: absolute;
-      transition: transform 1s ease-out;
+      transform: translate3d(0,0,0);
+      // transition: transform 1s ease-out;
     }
   }
   &:hover{
     img{
-      transform: scale(1.2);
-      transition: transform 5s ease-out;
+      animation-name: jello;
+      transform-origin: center;
+      animation-duration: 400ms;
+      animation-fill-mode: both;
     }
   }
 }
@@ -39,12 +57,12 @@
     width: 100%;
     font-size: 4.6rem;
     text-align: center;
-    line-height: 10rem;
+    line-height: 7rem;
     text-transform: uppercase;
     @include SERIF;
     @media #{$bp-xs}{
       font-size: 2.3rem;
-      line-height: 5rem;
+      line-height: 4rem;
     }
   }
 

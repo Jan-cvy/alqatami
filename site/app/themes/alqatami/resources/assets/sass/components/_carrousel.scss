@@ -13,7 +13,7 @@
     margin: 0 auto;
 
     @media #{$bp-xs-up}{
-      max-width: calc( 200vh - 31rem - 24rem );
+      max-width: calc( 150vh - 51rem );
     }
   }
 
@@ -21,6 +21,7 @@
     li{
       pointer-events: none; 
     }
+    cursor: url('../images/enter.svg') 20 8, pointer;
   }
 
   &__wrapper{
@@ -30,7 +31,7 @@
   &__list{
     position: relative;
     width: 100%;
-    height: calc( 100vh - 15.5rem - 12rem );
+    height: calc( 100vh - 34rem );
     @media #{$bp-xs}{
       height: 64vw;
       overflow: hidden;
@@ -51,7 +52,7 @@
       img{
         display: block;
         width: auto;
-        height: calc( 100vh - 15.5rem - 12rem );
+        height: calc( 100vh - 34rem );
         @media #{$bp-xs}{
           height: 64vw;
         }
@@ -66,6 +67,8 @@
     position: absolute;
     font-size: 2.5rem;
     top: 0;
+    left: -7rem;
+    width: 7rem;
     @media #{$bp-xs}{
       font-size: 1.5rem;
       top: -4rem;
