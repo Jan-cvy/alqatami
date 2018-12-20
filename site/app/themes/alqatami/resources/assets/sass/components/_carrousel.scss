@@ -79,19 +79,19 @@
   }
 
   &__arrow{
-    position: absolute;
+    position: fixed;
     height: 100%;
     top: 0;
     width: 50%;
 
     &--left{
       left: 0;
-      cursor: url(../images/arrow.png) 4 12, pointer;
+      cursor: url(../images/arrow.png) 12 4, pointer;
     }
 
     &--right{
       right: 0;
-      cursor: url(../images/arrow-right.png) 4 12, pointer;
+      cursor: url(../images/arrow-right.png) 12 4, pointer;
       transform: rotate(180deg);
     }
 
@@ -112,6 +112,7 @@
 
   &__description{
     position: relative;
+    pointer-events: none;
     // height: 12rem;
     margin-top: 3.5rem;
     text-align: center;

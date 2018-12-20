@@ -32,9 +32,16 @@ use Alqatami\Theme\App\Image;
         </div>
         <div class="carrousel__description portrait">
           <?php the_title(); ?> 
-          <?php if( get_field('date') ) {
-            echo '['.get_field('date').']'; 
-          } ?><br>
+          <?php 
+          $date = get_field("date");
+          if( $date ){
+            $dateTime = DateTime::createFromFormat("d/m/Y", $date);
+            $year = $dateTime->format('Y'); 
+          }
+          ?>
+          <?php if( isset( $year ) ): ?>
+            <time>[<?php echo $year; ?>]</time> 
+          <?php endif; ?><br>
           <?php get_field('location'); ?>
           <div class="carrousel__counter carrousel__counter--desktop desktop">
             <span>1</span> / <?php echo count($gallery); ?>
