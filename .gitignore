@@ -19,6 +19,7 @@ wp-config.local.php
 # Application
 site/app/themes/*
 !site/app/themes/alqatami
+!site/app/themes/alqatami5
 !site/app/themes/.gitkeep
 site/app/uploads/*
 !site/app/uploads/.gitkeep
