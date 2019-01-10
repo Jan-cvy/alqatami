@@ -14,7 +14,7 @@
         }
     ],
     "config"      : {
-        "vendor-dir": "site/app/vendor"
+        "vendor-dir": "public_html/app/vendor"
     },
     "require": {
         "johnpbloch/wordpress": ">=4.9",
@@ -33,10 +33,10 @@
         "wpackagist-plugin/simple-custom-post-order": "^2.4"
     },
     "extra"       : {
-        "wordpress-install-dir": "site/wp",
+        "wordpress-install-dir": "public_html/wp",
         "installer-paths": {
-            "site/app/plugins/{$name}/": ["type:wordpress-plugin"],
-            "site/app/themes/{$name}/": ["type:wordpress-theme"]
+            "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
+            "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
         }
     }
 }
