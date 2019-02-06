@@ -49,6 +49,8 @@
                     echo '</div>';
                 }
                 ?>
+            <?php else: ?>
+                <div class="comingsoon">Coming soon</div>
             <?php endif; ?>
         </div>
     </div>
